@@ -8,17 +8,18 @@ The dataset contains exhaled signal data stored in CSV files, categorized into t
 Path to dataset: /content/dataset/Exhaled_hydration/Exhaled hydration - Augmented Dataset
 File format: CSV
 Signal Data: The CSV files contain a column named SignalDb representing the exhaled signal.
-Data Preprocessing
+## Data Preprocessing
 The preprocessing steps include:
 
-Loading Data: Signal data from CSV files is loaded into a DataFrame.
+### Loading Data: Signal data from CSV files is loaded into a DataFrame.
 Patient ID Extraction: Each file contains the patient ID, which is extracted from the filename.
-Categorization: Hydration levels are categorized based on the average signal value:
+### Categorization: Hydration levels are categorized based on the average signal value:
 Low: Average signal < -30
 Normal: -30 <= Average signal <= 0
 High: Average signal > 0
-Dataset Split: The data is split into training (80%) and testing (20%) sets.
-Model
+### Dataset Split: The data is split into training (80%) and testing (20%) sets.
+
+## Model
 The model is a neural network built using TensorFlow/Keras:
 
 Input layer: Accepts signal data with the shape (signal_length,)
@@ -33,29 +34,25 @@ Evaluation:
 After training, the model is evaluated on the test set to determine its accuracy.
 
 ## Requirements
-Python 3.x
-TensorFlow
-NumPy
-Pandas
-Scikit-learn
+- **Python 3.x**
+- **TensorFlow**
+- **NumPy**
+- **Pandas**
+- **Scikit-learn**
 You can install the necessary dependencies using pip:
-
-bash
-Copy
-Edit
-pip install tensorflow numpy pandas scikit-learn
-Usage
-Clone or download the repository.
+````
+$ pip install tensorflow numpy pandas scikit-learn
+````
+   
+## Usage
+1. Clone or download the repository.
 Place the dataset in the specified directory or modify the path in the script.
 Run the script to preprocess the data, train the model, and evaluate its performance.
-bash
-Copy
-Edit
-python train_model.py
-Results
-After training, the model will output the test accuracy:
+2. Upload the dataset to the notebook 
 
-mathematica
-Copy
-Edit
-Test Accuracy: XX.XX%
+python train_model.py
+
+## Results
+After training, the model will output the test accuracy
+
+
